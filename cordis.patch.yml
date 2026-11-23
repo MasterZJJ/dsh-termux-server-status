@@ -1,0 +1,4 @@
+# 作为 profile bundle 挂载时，向宿主插入本插件。
+- insert:
+    - id: termux-state
+      name: dsh-termux-state

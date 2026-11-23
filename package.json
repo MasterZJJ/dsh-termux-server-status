@@ -1,0 +1,59 @@
+{
+  "name": "dsh-termux-state",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Termux server status in the DSH sidebar: battery, CPU, memory, thermal, storage",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/",
+    "cordis.patch.yml",
+    "scripts/",
+    "LICENSE",
+    "README.md"
+  ],
+  "bin": {
+    "dsh-termux-state": "scripts/install.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "termux",
+    "android",
+    "server-status",
+    "system-monitor",
+    "battery",
+    "sidebar"
+  ],
+  "license": "MIT",
+  "author": "MasterZJJ",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MasterZJJ/dsh-termux-server-status.git"
+  },
+  "homepage": "https://github.com/MasterZJJ/dsh-termux-server-status#readme",
+  "bugs": {
+    "url": "https://github.com/MasterZJJ/dsh-termux-server-status/issues"
+  },
+  "engines": {
+    "node": ">=24.9.0"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ]
+    }
+  }
+}

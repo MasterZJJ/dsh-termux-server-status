@@ -1,0 +1,24 @@
+# 依赖与构建产物
+node_modules/
+dist/
+
+# 安装脚本 / 打包产物
+*.tgz
+*.tar.gz
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-error.log*
+
+# 宿主运行期状态（不要提交）
+state.json
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+._*
+*~
